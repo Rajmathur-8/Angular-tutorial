@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col">
+        one way -from .ts to .html
+        -from html to .ts
+    </div>
+    <div class="col-4">
+        two way using ngModel
+    </div>
+    <div class="col-4"> Signal</div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="row">
+            <div class="col bg-success">
+                <!-- interpolation -->
+                <h4>{{courseName}}</h4>
+                <div>{{intputType}}</div>
+                <input type="text" value={{courseName}} placeholder="enter text">
+                <input type={{intputType}}>
+            </div>
+            <div class="col-4">
+                <!-- property binding -->
+                 <div [class]="myClassname">Danger
+                 </div>
+                 <input [type]="intputType">
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('Welcome to AngularProject1')">show welcome </button>
+                <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <input type="text" [(ngModel)]="courseName" > -- {{courseName}}
+    </div>
+    <div class="col-6">
+        <h2>{{firstName()}}</h2>
+    </div>
+</div>

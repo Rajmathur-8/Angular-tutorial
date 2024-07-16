@@ -1,0 +1,57 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Structural Directives</h1>
+    <p>*ngIf, *ngFor...</p>
+    <button class="btn btn-primary" (click)="navigateToAttributer()" >Go to attribute-directive</button>
+</div>
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDivisible" class="bg-danger p-3 text-center">
+            <h2>Div-1</h2>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible" class="bg-success p-3 text-center">
+            <h2>Div-2</h2>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="num1==num2" class="bg-secondary p-3 text-center">
+            <h2>Div-3</h2>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+  <div class="col-3 text-center">
+    <button class="btn btn-danger" (click)="hideDivi()">Hide</button>
+    <button class="btn btn-primary mx-2" (click)="showDivi()">Show</button>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+  </div>
+  <div class="col-3">
+    <div style="display: flex; align-items: center;">
+        <input type="text"[(ngModel)]="num1" placeholder="num1" class="width-50">
+        <input type="text"[(ngModel)]="num2" placeholder="num2" class="width-50">
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">{{city}}</li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <div *ngFor="let city of cityArray">
+            {{city}}
+        </div>
+    </div>
+    <div class="col-3">
+        <select >
+            <option *ngFor="let city of cityArray" value="">{{city}}</option>
+        </select>
+    </div>
+    <div class="col-3">
+        
+    </div>
+</div>
